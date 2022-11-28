@@ -146,10 +146,11 @@ public class burc{
                 isError = true;
 
         }
-        System.out.println("Burcunuz: " +burc);
 
-         if(month<1 || month>12)
+
+         if(isError==true)
             System.out.println("Hatalı giriş yaptınız, tekrar deneyiniz.");
-
+        else
+             System.out.println("Burcunuz: " +burc);
     }
 }
