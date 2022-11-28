@@ -1,0 +1,155 @@
+import java.util.Scanner;
+public class burc{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+
+        String burc="";
+        boolean isError = false;
+
+        System.out.println("Hangi ayda doğdunuz? ");
+        int month=input.nextInt();
+        System.out.println("Hangi gün doğdunuz? ");
+        int day=input.nextInt();
+
+
+
+
+        if(month==1) {
+
+            if (day >= 1 && day <= 31) {
+                if (day < 20) //System.out.println("Oğlak burcu");
+                    burc = "Oğlak";
+                else if (day >= 20)//System.out.println("Kova burcu");
+                    burc = "Kova";
+            } else// System.out.println("Ocak ayı içinde gün belirtin.");
+                isError = true;
+
+
+        }
+
+            if(month==2) {
+                if (day >= 1 && day <= 28) {
+                    if (day <= 19)//System.out.println("Kova burcu");
+                        burc = "Kova";
+                    else if (day >= 20)//System.out.println("Balık burcu");
+                        burc = "Balık";
+                } else//System.out.println("Şubat ayı içinde gün belirtin.");
+                    isError = true;
+
+            }
+
+            if(month==3) {
+                if (day >= 1 && day <= 31) {
+                    if (day <= 20)//System.out.println("Balık burcu");
+                        burc = "Balık";
+                    else if (day >= 21)//System.out.println("Koç burcu");
+                        burc = "Koç";
+                } else//System.out.println("Mart ayı içinde gün belirtin.");
+                    isError = true;
+
+            }
+
+        if(month==4) {
+            if (day >= 1 && day <= 30) {
+                if (day <= 20)//System.out.println("Koç burcu");
+                    burc = "Koç";
+                else if (day >= 21)//System.out.println("Boğa burcu");
+                    burc = "Boğa";
+            } else//System.out.println("Nisan ayı içinde gün belirtin.");
+                isError = true;
+
+        }
+
+        if(month==5) {
+            if (day >= 1 && day <= 31) {
+                if (day <= 21)//System.out.println("Boğa burcu");
+                    burc = "Boğa";
+                else if (day > 21)//System.out.println("İkizler burcu");
+                    burc = "İkizler";
+            } else// System.out.println("Mayıs ayı içinde gün belirtin.");
+                isError = true;
+
+        }
+
+        if(month==6) {
+            if (day >= 1 && day <= 30) {
+                if (day <= 22)//System.out.println("İkizler burcu");
+                    burc = "İkizler";
+                else if (day > 22)//System.out.println("Yengeç burcu");
+                    burc = "Yengeç";
+            } else//System.out.println("Haziran ayı içinde gün belirtin.");
+                isError = true;
+
+        }
+
+        if(month==7) {
+            if (day >= 1 && day <= 31) {
+                if (day <= 22)//System.out.println("Yengeç burcu");
+                    burc = "Yengeç";
+                else if (day > 22)//System.out.println("Aslan burcu");
+                    burc = "Aslan";
+            } else//System.out.println("Temmuz ayı içinde gün belirtin.");
+                isError = true;
+
+        }
+
+            if(month==8) {
+                if (day >= 1 && day <= 31) {
+                    if (day <= 22)//System.out.println("Aslan burcu");
+                        burc = "Aslan";
+                    else if (day >= 23)//System.out.println("Başak burcu");
+                        burc = "Başak";
+                } else//System.out.println("Ağustos ayı içinde gün belirtin.");
+                    isError = true;
+
+            }
+
+        if(month==9) {
+            if (day >= 1 && day <= 30) {
+                if (day <= 22)//System.out.println("Başak burcu");
+                    burc = "Başak";
+                else if (day >= 23)//System.out.println("Terazi burcu");
+                    burc = "Terazi";
+            } else//System.out.println("Eylül ayı içinde gün belirtin.");
+                isError = true;
+
+        }
+
+        if(month==10) {
+            if (day >= 1 && day <= 31) {
+                if (day <= 22)//System.out.println("Terazi burcu");
+                    burc = "Terazi";
+                else if (day >= 23)//System.out.println("Akrep burcu");
+                    burc = "Akrep";
+            } else//System.out.println("Ekim ayı içinde gün belirtin.");
+                isError = true;
+
+        }
+
+        if(month==11) {
+            if (day >= 1 && day <= 30) {
+                if (day <= 21)//System.out.println("Akrep burcu");
+                    burc = "Akrep";
+                else if (day >= 22)//System.out.println("Yay burcu");
+                    burc = "Yay";
+            } else//System.out.println("Kasım ayı içinde gün belirtin.");
+                isError = true;
+        }
+
+        if(month==12) {
+            if (day >= 1 && day <= 31) {
+                if (day <= 21)//System.out.println("Yay burcu");
+                    burc = "Yay";
+                else if (day >= 22)//System.out.println("Oğlak burcu");
+                    burc = "Oğlak";
+            } else//System.out.println("Aralık ayı içinde gün belirtin.");
+                isError = true;
+
+        }
+        System.out.println("Burcunuz: " +burc);
+
+         if(month<1 || month>12)
+            System.out.println("Hatalı giriş yaptınız, tekrar deneyiniz.");
+
+    }
+}
